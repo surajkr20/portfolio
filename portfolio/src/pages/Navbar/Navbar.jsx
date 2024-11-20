@@ -27,6 +27,7 @@ const Navbar = () => {
         {/* hamburger menu */}
         <div className="hamburger" ref={menu} onClick={()=>{
           mobile.current.classList.toggle('activemobile')
+          mobile.current.classList.toggle('activeham')
         }
         }>
           <div className="ham"></div>
@@ -36,7 +37,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <ul ref={mobile} 
-        className="mobile-menu nav-list flex flex-col items-center justify-center gap-6 list-none cursor-pointer text-white">
+        className="mobile-menu nav-list flex flex-col items-center justify-center gap-10 list-none cursor-pointer text-white">
           <Link to="home" smooth={true} duration={500} activeClass='active' spy={true}><li>Home</li></Link>
           <Link to="about" smooth={true} duration={500} activeClass='active' spy={true}><li>About</li></Link>
           <Link to="projects" smooth={true} duration={500} activeClass='active' spy={true}><li>Projects</li></Link>

@@ -19,7 +19,7 @@ a:hover{
 .mobile-menu{
     position: absolute;
     top: 80px;
-    width: 60%;
+    width: 70%;
     height: 100vh;
     right: 0;
     transform: translateX(100%);
@@ -45,6 +45,23 @@ a:hover{
     width: 35px;
     height: 2px;
     background-color: aquamarine;
+}
+
+/* hamburger cross animation */
+.activeham .ham:nth-child(1){
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+}
+
+.activeham .ham:nth-child(2){
+    opacity: 0;
+}
+
+.activeham .ham:nth-child(3){
+    transform: rotate(-45deg);
+    position: relative;
+    top: -12px;
 }
 
 @media (max-width:700px) {

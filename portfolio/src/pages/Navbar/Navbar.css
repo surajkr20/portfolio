@@ -1,5 +1,50 @@
 
 .nav-container{
     background-color: rgb(24, 16, 16);
+    position: fixed;
+    top: 0;
 }
 
+/* Link = a */
+a:hover{
+    color: rgb(203, 79, 79);
+    border-bottom: 2px solid white;
+}
+
+.active{
+    color: rgb(203, 79, 79);
+    border-bottom: 2px solid white;
+}
+
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    display: none;
+}
+
+.ham{
+    width: 35px;
+    height: 2px;
+    background-color: aquamarine;
+}
+
+.mobile-menu{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    transform: translateX(100%);
+}
+
+@media (max-width:700px) {
+    .desktop-menu{
+        display: none;
+    }
+    .hamburger{
+        display: flex;
+    }
+}

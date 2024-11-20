@@ -2,7 +2,7 @@
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <div id="projects" className="w-full">Projects</div>
   )
 }
 

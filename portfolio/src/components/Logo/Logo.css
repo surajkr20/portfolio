@@ -1,0 +1,12 @@
+
+.logo{
+    background: linear-gradient(rgb(79, 14, 14),rgb(225, 12, 12),rgb(151, 132, 132),rgb(118, 14, 14));
+    background-clip: text;
+    color: transparent;
+}
+
+#logo{
+    background-color: #352828;
+    border-radius: 50%;
+    border: 1px solid whitesmoke;
+}

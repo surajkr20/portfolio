@@ -1,7 +1,7 @@
-// import React from 'react'
+
 import Logo from "../../components/Logo/Logo";
-// import Icons from "../../components/SocialMediaIcons/Icons";
 import "./Navbar.css";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   return (
@@ -11,14 +11,27 @@ const Navbar = () => {
         {/* logo icon */}
         <Logo />
 
-        {/* social media icons */}
-        {/* <Icons/> */}
+        {/* Desktop Menu */}
+        <ul className="desktop-menu nav-list flex flex-row items-center gap-6 list-none cursor-pointer text-white">
+          <Link to="home" smooth={true} duration={500} activeClass='active' spy={true}><li>Home</li></Link>
+          <Link to="about" smooth={true} duration={500} activeClass='active' spy={true}><li>About</li></Link>
+          <Link to="projects" smooth={true} duration={500} activeClass='active' spy={true}><li>Projects</li></Link>
+          <Link to="contact" smooth={true} duration={500} activeClass='active' spy={true}><li>Contact</li></Link>
+        </ul>
 
-        <ul className="nav-list flex flex-row items-center gap-6 list-none text-blue-100">
-          <li>Home</li>
-          <li>About</li>
-          <li>Project</li>
-          <li>Contact</li>
+        {/* hamburger menu */}
+        <div className="hamburger">
+          <div className="ham"></div>
+          <div className="ham"></div>
+          <div className="ham"></div>
+        </div>
+
+        {/* Mobile Menu */}
+        <ul className="mobile-menu nav-list flex flex-row items-center gap-6 list-none cursor-pointer text-white">
+          <Link to="home" smooth={true} duration={500} activeClass='active' spy={true}><li>Home</li></Link>
+          <Link to="about" smooth={true} duration={500} activeClass='active' spy={true}><li>About</li></Link>
+          <Link to="projects" smooth={true} duration={500} activeClass='active' spy={true}><li>Projects</li></Link>
+          <Link to="contact" smooth={true} duration={500} activeClass='active' spy={true}><li>Contact</li></Link>
         </ul>
 
       </nav>

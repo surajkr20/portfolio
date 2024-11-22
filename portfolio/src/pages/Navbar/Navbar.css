@@ -71,4 +71,8 @@ a:hover{
     .hamburger{
         display: flex;
     }
+    .nav-container{
+        justify-content: space-between;
+        
+    }
 }

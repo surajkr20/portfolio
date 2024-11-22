@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="nav-container flex flex-row items-center justify-between w-full mx-auto px-16 py-4">
+      <nav className="nav-container flex flex-row items-center justify-between w-full mx-auto px-16 py-4 z-10">
 
         {/* logo icon */}
         <Logo />

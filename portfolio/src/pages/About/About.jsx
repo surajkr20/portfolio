@@ -4,7 +4,9 @@ import './About.css'
 
 const About = () => {
   return (
-    <div id='about' className='w-full'>About</div>
+    <div id='about' className='w-full'>
+      
+    </div>
   )
 }
 

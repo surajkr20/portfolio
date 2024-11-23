@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 40px;
 }
 
 .circle-line{
@@ -33,4 +34,26 @@
     width: 2px;
     height: 100px;
     background-color: aliceblue;
+}
+
+.about-details{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-details ul{
+    list-style: none;
+}
+
+.about-details h1{
+    background: linear-gradient(to right, rgb(72, 204, 39), rgb(206, 20, 20));
+    background-clip: text;
+    color: transparent;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.about-details span{
+    color: rgb(138, 212, 214);
 }

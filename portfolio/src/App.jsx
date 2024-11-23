@@ -6,6 +6,7 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Projects from './pages/Projects/Projects';
 import Contact from './pages/contact/Contact';
+import Skills from './pages/Skills/Skills';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Navbar/>
       <Home/>
       <About/>
+      <Skills/>
       <Projects/>
       <Contact/>
     </div>

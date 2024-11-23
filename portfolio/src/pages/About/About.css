@@ -57,3 +57,26 @@
 .about-details span{
     color: rgb(138, 212, 214);
 }
+
+.right-about{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (max-width: 750px){
+    #about{
+        flex-direction: column;
+    }
+    .left-about{
+        width: 100%;
+        padding: 10%;
+    }
+    .right-about{
+        width: 100%;
+    }
+}

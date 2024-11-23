@@ -1,6 +1,11 @@
 // import React from 'react'
 
+import SkillsCard from "../../components/Card/Card";
 import "./About.css";
+import mern from '../../assets/mern.png'
+import java from '../../assets/java.png'
+import dsa from '../../assets/dsa.png'
+
 
 const About = () => {
   return (
@@ -57,7 +62,11 @@ const About = () => {
         </div>
       </div>
 
-      <div className="right-about"></div>
+      <div className="right-about">
+        <SkillsCard title={'MERN STACK DEVELOPER'} image={mern}/>
+        <SkillsCard title={"C, C++, JS/TS"} image={java}/>
+        <SkillsCard title={"DSA"} image={dsa}/>
+      </div>
     </div>
   );
 };

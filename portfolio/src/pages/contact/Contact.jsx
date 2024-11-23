@@ -1,10 +1,21 @@
 // import React from 'react'
 import './Contact.css'
+import contact from '../../assets/contact.png'
 
 const Contact = () => {
   return (
-    <div id="contact" className='w-full'>
-      Contact
+    <div id="contact">
+      <div className="left-contact">
+        <img src={contact} alt="" />
+      </div>
+      <div className="right-contact">
+        <form action="#" method='POST'>
+          <input type="text" placeholder='Name' name='username'/>
+          <input type="email" name='email' placeholder='email' />
+          <textarea name="message" id="text-area" placeholder='write your message'></textarea>
+          <input type="submit" id='btn' value='submit'/>
+        </form>
+      </div>
     </div>
   )
 }

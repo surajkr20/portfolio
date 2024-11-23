@@ -13,12 +13,11 @@ const Home = () => {
           <div className="line2">Suraj Kumar</div>
           <div className="line3">
             <TypingEffect
-              text={["Programmer","FullStack Developer","Software Engineer"]}
+              text={["Programmer","MERN Stack Developer","Software Engineer"]}
               speed={100}
               eraseSpeed={50}
               eraseDelay={1000}
               typingDelay={500}
-              
             />
           </div>
         </div>

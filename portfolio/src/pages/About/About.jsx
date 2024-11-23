@@ -5,9 +5,85 @@ import "./About.css";
 import mern from '../../assets/mern.png'
 import java from '../../assets/java.png'
 import dsa from '../../assets/dsa.png'
-
+import {useGSAP} from '@gsap/react'
+import gsap from 'gsap'
+import {ScrollTrigger} from 'gsap/all'
+gsap.registerPlugin(ScrollTrigger)
 
 const About = () => {
+
+  useGSAP(()=>{
+    gsap.from(".circle",{
+      x: -100,
+      duration: 1,
+      opacity: 0,
+      scrollTrigger:{
+        trigger: '.circle',
+        scroll: 'body',
+        scrub: 2,
+        markers: true,
+        start: 'top 50%',
+        end: 'top 20%'
+      }
+    })
+  })
+  useGSAP(()=>{
+    gsap.from(".line",{
+      x: -100,
+      duration: 1,
+      opacity: 0,
+      stagger: 1,
+      scrollTrigger:{
+        trigger: '.line',
+        scroll: 'body',
+        scrub: 2,
+        markers: true,
+        start: 'top 60%',
+        end: 'top 30%'
+      }
+    })
+  })
+  useGSAP(()=>{
+    gsap.from(".about-details h1",{
+      x: -100,
+      duration: 1,
+      opacity: 0,
+      stagger: 1,
+      scrollTrigger:{
+        trigger: 'h1',
+        scroll: 'body',
+        scrub: 2,
+        markers: true,
+        start: 'top 60%',
+        end: 'top 30%'
+      }
+    })
+  })
+  useGSAP(()=>{
+    gsap.from(".about-details li",{
+      y: 100,
+      duration: 1,
+      opacity: 0,
+      stagger: 1,
+      scrollTrigger:{
+        trigger: '.about-details li',
+        scroll: 'body',
+        scrub: 2,
+        markers: true,
+        start: 'top 60%',
+        end: 'top 40%'
+      }
+    })
+  })
+  useGSAP(()=>{
+    gsap.from(".right-about",{
+      x: 100,
+      duration: 1,
+      opacity: 0,
+      stagger: 1,
+    })
+  })
+
   return (
     <div id="about" className="w-full">
       <div className="left-about">

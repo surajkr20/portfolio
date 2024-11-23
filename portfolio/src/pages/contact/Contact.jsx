@@ -9,7 +9,7 @@ const Contact = () => {
         <img src={contact} alt="" />
       </div>
       <div className="right-contact">
-        <form action="#" method='POST'>
+        <form action="https://formspree.io/f/xjkvevbj" method='POST'>
           <input type="text" placeholder='Name' name='username'/>
           <input type="email" name='email' placeholder='email' />
           <textarea name="message" id="text-area" placeholder='write your message'></textarea>

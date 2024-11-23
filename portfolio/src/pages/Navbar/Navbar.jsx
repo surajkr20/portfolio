@@ -3,18 +3,30 @@ import { useRef } from "react";
 import Logo from "../../components/Logo/Logo";
 import "./Navbar.css";
 import { Link } from "react-scroll";
+import {useGSAP} from '@gsap/react'
+import gsap from 'gsap'
 
 const Navbar = () => {
 
   const menu = useRef()
   const mobile = useRef()
 
+  useGSAP(()=>{
+    let tl = gsap.timeline()
+    tl.from('nav li',{
+      y:-100,
+      duration: 1,
+      opacity: 0,
+      stagger:0.5
+    })
+  })
+
   return (
     <>
       <nav className="nav-container flex flex-row items-center justify-between w-full mx-auto px-16 py-4 z-10">
 
         {/* logo icon */}
-        <Logo />
+        <Logo/>
 
         {/* Desktop Menu */}
         <ul className="desktop-menu nav-list flex flex-row items-center gap-6 list-none cursor-pointer text-white">

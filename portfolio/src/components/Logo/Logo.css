@@ -2,7 +2,11 @@
 .logo{
     width: 50px;
     height: 50px;
-    background: linear-gradient(rgb(62, 45, 12),rgb(235, 218, 218), rgb(214, 39, 39));
+    border: 1px white solid;
+}
+
+#logo-text{
+    background: linear-gradient(rgb(37, 35, 30),rgb(8, 215, 8), rgb(98, 10, 10));
     background-clip: text;
     color: transparent;
 }

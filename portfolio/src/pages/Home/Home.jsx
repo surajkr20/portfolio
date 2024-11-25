@@ -28,25 +28,28 @@ const Home = () => {
             typingDelay={500}
           />
         </div>
+        <h1>Suraj Kumar</h1>
       </div>
 
       <div className="right-home">
         <div className="home-details">
-          
           <h1>
-            Turning Vision Into Reality With Code And Design
+            Transforming Ideas into Functional Realities through Modern
+            Development, Clean Code, and Logical Problem-Solving
           </h1>
 
           <p>
-            As a skilled MERN STACK developer and programmer, i am dedicated to turning ideas into innovative web applications.
-            Explore my latest projects, showcasing my expertise in React/Next.js and web development 
+            As a proficient MERN stack developer and problem solver, I
+            specialize in crafting innovative web applications. My expertise
+            lies in React, Next.js, and modern web development, showcased
+            through dynamic projects that bring ideas to life.
           </p>
 
-        </div>
-
-        <div>
           <button id="btn">Resume</button>
-          {/* <button id="btn">Hire Me</button> */}
+          {/* Hi, I'm Suraj Kumar (also known as Abhinav Bhardwaj)
+          
+          Hi, I'm Suraj Kumar | Alias: Abhinav Bhardwaj*/}
+          
         </div>
       </div>
     </div>

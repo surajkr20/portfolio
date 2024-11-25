@@ -1,48 +1,51 @@
 // import React from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const BackgroundAnimation = () => {
-  const containerVariants = {
-    animate: {
-      scale: [1, 1.2, 1],
-      opacity: [0.8, 1, 0.8],
-      transition: {
-        duration: 10,
-        repeat: Infinity,
-        repeatType: 'mirror',
-        staggerChildren: 2,
-      },
-    },
+  const [particles, setParticles] = useState([]);
+  const maxParticles = 50;
+
+  // Track cursor position
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    setParticles((prevParticles) => [
+      ...prevParticles,
+      { x: clientX, y: clientY, id: Math.random() },
+    ].slice(-maxParticles)); // Limit particle count
   };
 
-  const circleVariants = {
-    animate: {
-      y: [0, 30, 0],
-      x: [0, -30, 0],
-      opacity: [1, 0.8, 1],
-      transition: {
-        duration: 6,
-        repeat: Infinity,
-        repeatType: 'mirror',
-      },
-    },
-  };
+  // Clean up particles periodically
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setParticles((prevParticles) => prevParticles.slice(1));
+    }, 50);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="background-animation">
-      <motion.div
-        className="circle-container"
-        variants={containerVariants}
-        animate="animate"
-      >
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className={`circle circle-${i}`}
-            variants={circleVariants}
-          />
-        ))}
-      </motion.div>
+    <div
+      className="background-animation"
+      onMouseMove={handleMouseMove}
+    >
+      {particles.map((particle) => (
+        <motion.div
+          key={particle.id}
+          className="particle"
+          initial={{ opacity: 1, scale: 1 }}
+          animate={{
+            opacity: 0,
+            scale: 0.5,
+            x: particle.x - 5,
+            y: particle.y - 5,
+          }}
+          transition={{
+            duration: 1,
+            ease: 'easeOut',
+          }}
+        />
+      ))}
+
       <style>{`
         .background-animation {
           position: fixed;
@@ -52,58 +55,16 @@ const BackgroundAnimation = () => {
           height: 100%;
           overflow: hidden;
           z-index: -1;
-          // background: linear-gradient(135deg, #1e1e2f, #2b2b42);
-          background-color : black
+          background: linear-gradient(135deg, #000, #fff);
         }
-        .circle-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 100%;
-          position: relative;
-        }
-        .circle {
+        .particle {
           position: absolute;
+          width: 10px;
+          height: 10px;
           border-radius: 50%;
-          background: radial-gradient(circle, #ff6f91, #ff9671, #ffc75f);
-          mix-blend-mode: screen;
-        }
-        .circle-0 {
-          width: 200px;
-          height: 200px;
-          top: 10%;
-          left: 20%;
-        }
-        .circle-1 {
-          width: 150px;
-          height: 150px;
-          top: 40%;
-          left: 60%;
-        }
-        .circle-2 {
-          width: 180px;
-          height: 180px;
-          top: 70%;
-          left: 10%;
-        }
-        .circle-3 {
-          width: 120px;
-          height: 120px;
-          top: 20%;
-          left: 80%;
-        }
-        .circle-4 {
-          width: 160px;
-          height: 160px;
-          top: 50%;
-          left: 40%;
-        }
-        .circle-5 {
-          width: 100px;
-          height: 100px;
-          top: 80%;
-          left: 70%;
+          background: radial-gradient(circle, #ffffff, #000000);
+          pointer-events: none;
+          mix-blend-mode: difference;
         }
       `}</style>
     </div>

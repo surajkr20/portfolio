@@ -55,9 +55,26 @@
     align-items: center;
     justify-content: center;
     gap: 40px;
+    padding: 40px;
+    text-align: left;
 }
 
+.right-home .home-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
 
+.right-home h1{
+    font-size: 35px;
+}
+
+.right-home p{
+    color: rgb(177, 152, 119);
+    font-size: 17px;
+    font-weight: 100;
+}
 
 #btn:hover{
     background-color: rgb(29, 28, 27);

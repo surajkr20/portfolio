@@ -35,8 +35,7 @@ const Logo = () => {
           transition:{duration:1, repeat: Infinity}
         }}
       >
-        <div className="text-pretty text-orange-600">s</div>
-        <span className="text-gray-500">k</span>
+        <span id='logo-text' className='text-[20px]'>SK</span>
       </MotionLink>
       <Outlet/>
     </div>

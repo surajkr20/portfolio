@@ -7,7 +7,7 @@ const Icons = () => {
   useGSAP(() => {
     let tl = gsap.timeline();
     tl.from("#icon-cover", {
-      x: 300,
+      x: 100,
       duration: 2,
       opacity: 0,
     });
@@ -37,18 +37,6 @@ const Icons = () => {
           className="text-white transition-colors"
         >
           <i className="fab fa-github text-2xl fill-current"></i>
-        </a>
-
-        {/* leetcode profile */}
-        <a
-          id="icon-cover"
-          href="https://leetcode.com/u/Suraj_kr78/" 
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white transition-colors"
-        >
-          <i className="fab fa-leetcode text-2xl fill-current"></i>{" "}
-          {/* LeetCode Icon */}
         </a>
 
         {/* X (formerly Twitter) Icon */}

@@ -65,7 +65,7 @@ form:hover{
     outline: none;
 }
 
-#btn{
+.right-contact #btn{
     width: 100px;
     height: 40px;
     background-color: rgb(78, 78, 144);

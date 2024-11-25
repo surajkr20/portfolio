@@ -5,19 +5,50 @@ import TypingEffect from "react-typing-effect";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Icons from "../../components/SocialMediaIcons/Icons";
+import {Link} from 'react-scroll'
 
 const Home = () => {
   useGSAP(() => {
     gsap.from(".left-home img", {
       x: -100,
       duration: 1.5,
+      stagger: 1,
+    });
+  });
+  useGSAP(() => {
+    gsap.from(".home-details h1", {
+      y: -100,
+      duration: 1,
+      opacity: 0,
+      stagger: 2,
+      scrollTrigger: {
+        trigger: ".home-details h1",
+        scroll: "body",
+      },
+    });
+  });
+  useGSAP(() => {
+    gsap.from(".home-details p", {
+      x: 100,
+      duration: 1,
+      opacity: 0,
+      stagger: 1,
+      scrollTrigger: {
+        trigger: ".home-details p",
+        scroll: "body",
+      },
     });
   });
 
   return (
     <div id="home">
       <div className="left-home">
-        <img src={man} alt="suraj kr" />
+        <img id="img" src={man} alt="suraj kr" />
+        <h1 className="">
+          <span className="text-orange-400">Suraj </span>Kr
+          <span> | Alias: </span>
+          <span className="text-orange-400"> Abhinav </span>Bhardwaj
+        </h1>
         <Icons />
         <div id="type-writer" className="line3">
           <TypingEffect
@@ -28,7 +59,6 @@ const Home = () => {
             typingDelay={500}
           />
         </div>
-        <h1>Suraj Kumar</h1>
       </div>
 
       <div className="right-home">
@@ -45,11 +75,12 @@ const Home = () => {
             through dynamic projects that bring ideas to life.
           </p>
 
-          <button id="btn">Resume</button>
-          {/* Hi, I'm Suraj Kumar (also known as Abhinav Bhardwaj)
-          
-          Hi, I'm Suraj Kumar | Alias: Abhinav Bhardwaj*/}
-          
+          <div className="flex flex-row items-center gap-6">
+            <button onClick={() => {}} id="btn">
+              Resume
+            </button>
+            <Link to="contact" smooth={500} className="text-xl text-blue-600 underline cursor-pointer">contact</Link>
+          </div>
         </div>
       </div>
     </div>

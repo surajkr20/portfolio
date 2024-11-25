@@ -6,7 +6,7 @@
 }
 
 /* Link = a */
-a:hover{
+#list:hover{
     color: rgb(203, 79, 79);
     border-bottom: 2px solid white;
 }

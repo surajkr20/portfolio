@@ -3,7 +3,7 @@
 import SkillsCard from "../../components/Card/Card";
 import "./About.css";
 import mern from '../../assets/mern.png'
-import java from '../../assets/java.png'
+import lang from '../../assets/programming-languages.png'
 import dsa from '../../assets/dsa.png'
 import {useGSAP} from '@gsap/react'
 import gsap from 'gsap'
@@ -21,7 +21,6 @@ const About = () => {
         trigger: '.circle',
         scroll: 'body',
         scrub: 2,
-        markers: true,
         start: 'top 50%',
         end: 'top 20%'
       }
@@ -37,7 +36,6 @@ const About = () => {
         trigger: '.line',
         scroll: 'body',
         scrub: 2,
-        markers: true,
         start: 'top 60%',
         end: 'top 30%'
       }
@@ -53,7 +51,6 @@ const About = () => {
         trigger: 'h1',
         scroll: 'body',
         scrub: 2,
-        markers: true,
         start: 'top 60%',
         end: 'top 30%'
       }
@@ -69,7 +66,6 @@ const About = () => {
         trigger: '.about-details li',
         scroll: 'body',
         scrub: 2,
-        markers: true,
         start: 'top 60%',
         end: 'top 40%'
       }
@@ -140,7 +136,7 @@ const About = () => {
 
       <div className="right-about">
         <SkillsCard title={'MERN STACK DEVELOPER'} image={mern}/>
-        <SkillsCard title={"C, C++, JS/TS"} image={java}/>
+        <SkillsCard title={"C, C++, JS/TS"} image={lang}/>
         <SkillsCard title={"DSA"} image={dsa}/>
       </div>
     </div>

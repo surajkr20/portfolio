@@ -1,6 +1,12 @@
-import { Link } from "react-scroll";
+
 import {useGSAP} from '@gsap/react'
 import gsap from 'gsap'
+
+import './Logo.css'
+import {Link, Outlet} from "react-router-dom";
+import { motion } from "framer-motion";
+
+const MotionLink = motion(Link);
 
 const Logo = () => {
 
@@ -20,15 +26,19 @@ const Logo = () => {
   })
 
   return (
-    <div className="flex items-center justify-center">
-      <Link
+    <div className="flex items-center justify-center" id="link">
+      <MotionLink
         to="home" smooth={true}
-        id="link"
-        className="w-12 h-12 bg-[#340f0f] text-white flex items-center text-2xl justify-center rounded-full font-bold cursor-pointer"
+        className="logo w-10 h-10 flex items-center text-2xl justify-center rounded-full font-bold cursor-pointer"
+        whileHover={{
+          backgroundColor:["#121212", "rgba(131,58,180,1)","rgba(253,29,29,1)","rgba(252,176,69,1)","rgba(131,58,180,1)", "#121212"],
+          transition:{duration:1, repeat: Infinity}
+        }}
       >
         <div className="text-pretty text-orange-600">s</div>
-        <span>k</span>
-      </Link>
+        <span className="text-gray-500">k</span>
+      </MotionLink>
+      <Outlet/>
     </div>
   );
 };

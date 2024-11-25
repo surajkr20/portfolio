@@ -1,38 +1,63 @@
 
 #home{
+    width: 100%;
     height: 100%;
     background-color: rgb(12, 12, 12);
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
+/* left home styling............. */
 .left-home{
     width: 50%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-content: center;
-    margin: 0 auto;
-    padding-left: 120px;
+    gap: 30px;
+    background-color: rgb(27, 26, 26);
 }
 
-.home-details{
+.left-home img{
+    max-width: 280px;
+    border: 3px solid rgb(202, 80, 80);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.left-home #type-writer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     font-size: 2vmax;
-}
-
-.line1{
-    font-size: 0.8em;
-}
-.line2{
-    font-size: 2.5em;
-    background: linear-gradient(rgb(158, 9, 9),rgb(151, 132, 132),rgb(236, 39, 39));
+    color: rgb(221, 166, 94);
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(rgb(62, 45, 12),rgb(235, 218, 218), rgb(214, 39, 39));
     background-clip: text;
     color: transparent;
-    font-weight: 600;
 }
-.line3{
-    font-size: 1em;
+
+/* left home styling end */
+
+/* rith home styling start.................. */
+
+.right-home{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
 }
+
+
 
 #btn:hover{
     background-color: rgb(29, 28, 27);
@@ -41,131 +66,19 @@
     transition: all 0.5s;
 }
 
-.right-home{
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.right-home img{
-    width: 50%;
-    filter: drop-shadow(2px 2px 20px rgb(179, 141, 141));
-}
-
 @media (max-width: 700px){
     #home{
-        flex-direction: column-reverse;
-    }
-    .right-home{
-        width: 100%;
-        height: 60vh;
-        align-items: end;
+        flex-direction: column;
     }
     .left-home{
         width: 100%;
-        height: 40vh;
-        margin: 0 auto;
-        padding-left: 28vw;
-        .home-details{
-            font-size: 20px;
-        }
+    }
+    .left-home img{
+        width: 90%;
+    }
+    .left-home #type-writer{
+        font-size: 30px;
     }
 }
 
-@media (max-width: 610px){
-    #home{
-        flex-direction: column-reverse;
-    }
-    .right-home{
-        width: 100%;
-        height: 55vh;
-        align-items: end;
-    }
-    .left-home{
-        width: 100%;
-        height: 45vh;
-        margin: 0 auto;
-        padding-left: 25vw;
-        .home-details{
-            font-size: 20px;
-        }
-    }
-}
-
-@media (max-width: 550px){
-    #home{
-        flex-direction: column-reverse;
-    }
-    .right-home{
-        width: 100%;
-        height: 50vh;
-        align-items: end;
-    }
-    .left-home{
-        width: 100%;
-        height: 50vh;
-        align-items: start;
-        margin: 0 auto;
-        padding-left: 27vw;
-        .home-details{
-            font-size: 15px;
-        }
-    }
-}
-
-@media (max-width: 435px){
-    #home{
-        flex-direction: column-reverse;
-    }
-    .right-home{
-        width: 100%;
-        height: 45vh;
-        align-items: end;
-    }
-    .left-home{
-        width: 100%;
-        height: 62vh;
-        align-items: start;
-        margin: 0 auto;
-        padding-left: 26vw;
-        margin-top: -50px;
-        .home-details{
-            font-size: 3.5vw;
-        }
-    }
-    #btn{
-        width: 30vw;
-        padding: 8px;
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 350px){
-    #home{
-        flex-direction: column-reverse;
-    }
-    .right-home{
-        width: 100%;
-        height: 45vh;
-        align-items: end;
-    }
-    .left-home{
-        width: 100%;
-        height: 60vh;
-        align-items: start;
-        margin: 0 auto;
-        padding-left: 26vw;
-        margin-top: -40px;
-        .home-details{
-            font-size: 3vw;
-        }
-    }
-    #btn{
-        width: 34vw;
-        padding: 6px;
-        font-size: 12px;
-    }
-}
 

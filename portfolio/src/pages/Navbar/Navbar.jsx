@@ -30,11 +30,11 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="desktop-menu nav-list flex flex-row items-center gap-6 list-none cursor-pointer text-white">
-          <Link to="home" smooth={true} duration={500} activeClass='active' spy={true}><li>Home</li></Link>
-          <Link to="about" smooth={true} duration={500} activeClass='active' spy={true}><li>About</li></Link>
-          <Link to="skills" smooth={true} duration={500} activeClass='active' spy={true}><li>Skills</li></Link>
-          <Link to="projects" smooth={true} duration={500} activeClass='active' spy={true}><li>Projects</li></Link>
-          <Link to="contact" smooth={true} duration={500} activeClass='active' spy={true}><li>Contact</li></Link>
+          <Link to="home" smooth={true} duration={500} activeClass='active' spy={true}><li id="list">Home</li></Link>
+          <Link to="about" smooth={true} duration={500} activeClass='active' spy={true}><li id="list">About</li></Link>
+          <Link to="skills" smooth={true} duration={500} activeClass='active' spy={true}><li id="list">Skills</li></Link>
+          <Link to="projects" smooth={true} duration={500} activeClass='active' spy={true}><li id="list">Projects</li></Link>
+          <Link to="contact" smooth={true} duration={700} activeClass='active' spy={true}><li id="list">Contact</li></Link>
         </ul>
 
         {/* hamburger menu */}
@@ -51,11 +51,11 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <ul ref={mobile} 
         className="mobile-menu nav-list flex flex-col items-center justify-center gap-10 list-none cursor-pointer text-white">
-          <Link to="home" smooth={true} duration={500} activeClass='active' spy={true}><li>Home</li></Link>
-          <Link to="about" smooth={true} duration={500} activeClass='active' spy={true}><li>About</li></Link>
-          <Link to="about" smooth={true} duration={500} activeClass='active' spy={true}><li>Skills</li></Link>
-          <Link to="projects" smooth={true} duration={500} activeClass='active' spy={true}><li>Projects</li></Link>
-          <Link to="contact" smooth={true} duration={500} activeClass='active' spy={true}><li>Contact</li></Link>
+          <Link to="home" smooth={true} duration={500} activeClass='active' spy={true}><li id="list">Home</li></Link>
+          <Link to="about" smooth={true} duration={500} activeClass='active' spy={true}><li id="list">About</li></Link>
+          <Link to="skills" smooth={true} duration={500} activeClass='active' spy={true}><li id="list">Skills</li></Link>
+          <Link to="projects" smooth={true} duration={500} activeClass='active' spy={true}><li id="list">Projects</li></Link>
+          <Link to="contact" smooth={true} duration={700} activeClass='active' spy={true}><li id="list">Contact</li></Link>
         </ul>
 
       </nav>

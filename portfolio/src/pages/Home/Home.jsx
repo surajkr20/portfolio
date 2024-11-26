@@ -5,26 +5,17 @@ import TypingEffect from "react-typing-effect";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Icons from "../../components/SocialMediaIcons/Icons";
-import {Link} from 'react-scroll'
+import { Link } from "react-scroll";
+import AnimeText from "../../components/AnimeText/AnimeText";
+
 
 const Home = () => {
+
   useGSAP(() => {
     gsap.from(".left-home img", {
       x: -100,
       duration: 1.5,
       stagger: 1,
-    });
-  });
-  useGSAP(() => {
-    gsap.from(".home-details h1", {
-      y: -100,
-      duration: 1,
-      opacity: 0,
-      stagger: 2,
-      scrollTrigger: {
-        trigger: ".home-details h1",
-        scroll: "body",
-      },
     });
   });
   useGSAP(() => {
@@ -63,10 +54,15 @@ const Home = () => {
 
       <div className="right-home">
         <div className="home-details">
-          <h1>
+          {/* <h1>
             Transforming Ideas into Functional Realities through Modern
             Development, Clean Code, and Logical Problem-Solving
-          </h1>
+          </h1> */}
+
+          <AnimeText
+            Text="Transforming Ideas into Functional Realities through Modern Development, Clean Code, and Logical Problem-Solving"
+            className="!md:text-[10px] !text-left"
+          />
 
           <p>
             As a proficient MERN stack developer and problem solver, I
@@ -76,10 +72,17 @@ const Home = () => {
           </p>
 
           <div className="flex flex-row items-center gap-6">
-            <button onClick={() => {}} id="btn">
+            {/* Resume section */}
+            <a href={man} target={"_blank"} id="Resume">
               Resume
-            </button>
-            <Link to="contact" smooth={500} className="text-xl text-blue-600 underline cursor-pointer">contact</Link>
+            </a>
+            <Link
+              to="contact"
+              smooth={500}
+              className="text-xl text-blue-600 underline cursor-pointer"
+            >
+              contact
+            </Link>
           </div>
         </div>
       </div>

@@ -1,0 +1,13 @@
+
+.anime-text h1{
+    font-size: 2.3vw;
+    line-height: 6.5vh;
+}
+
+@media (max-width: 730px){
+    .anime-text h1{
+        font-size: 18px;
+        color: rgb(218, 249, 249);
+        line-height: 4.5vh;
+    }
+}

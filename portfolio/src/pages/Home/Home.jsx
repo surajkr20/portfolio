@@ -5,9 +5,7 @@ import TypingEffect from "react-typing-effect";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Icons from "../../components/SocialMediaIcons/Icons";
-import { Link } from "react-scroll";
 import AnimeText from "../../components/AnimeText/AnimeText";
-
 
 const Home = () => {
 
@@ -40,10 +38,10 @@ const Home = () => {
           <span> | Alias: </span>
           <span className="text-orange-400"> Abhinav </span>Bhardwaj
         </h1>
-        <Icons />
+        <Icons/>
         <div id="type-writer" className="line3">
           <TypingEffect
-            text={["Programmer", "MERN Stack Developer", "Software Engineer"]}
+            text={["Problem Solver", "MERN Stack Developer", "Software Engineer","Programmer"]}
             speed={100}
             eraseSpeed={50}
             eraseDelay={1000}
@@ -76,13 +74,12 @@ const Home = () => {
             <a href={man} target={"_blank"} id="Resume">
               Resume
             </a>
-            <Link
-              to="contact"
-              smooth={500}
+            <a
+              href="mailto:your-suraj71308kumar@gmail.com"
               className="text-xl text-blue-600 underline cursor-pointer"
             >
               contact
-            </Link>
+            </a>
           </div>
         </div>
       </div>
